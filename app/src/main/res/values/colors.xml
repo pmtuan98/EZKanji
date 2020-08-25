@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="color_primary">#FFFFFF</color>
+    <color name="color_primary_dark">#FCFCFC</color>
+    <color name="color_accent">#4297FF</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_border">#D9D9D9</color>
+    <color name="color_fragment">#F2F2F2</color>
+    <color name="color_background">#FCFCFC</color>
+    <color name="color_line">#B3AE9E</color>
+    <color name="color_text_primary">#000000</color>
+    <color name="color_play_button">#DE0909</color>
+    <color name="color_kanji_onjomi">#307FE4</color>
+    <color name="color_kanji_kunjomi">#DD1818</color>
+    <color name="color_word_remembered">#CFEEFF</color>
+    <color name="color_gray">#A0A0A0</color>
+    <color name="color_lawn_green">#A3FF4A</color>
+    <color name="color_gray_73">#BABABA</color>
+    <color name="color_background_profile">#f4f4f4</color>
+    <color name="color_background_bottom">#FCFBF6</color>
+    <color name="color_app">#C0392D</color>
+    <color name="color_ranking_cardview">#B9CB65</color>
+
+
+    <color name="color_blue_50">#d8dee4</color>
+    <color name="color_blue_100">#bbc9d5</color>
+    <color name="color_blue_200">#95adc1</color>
+    <color name="color_blue_300">#6f93ad</color>
+    <color name="color_blue_500">#016087</color>
+    <color name="color_dark_gray">#A9A9A9</color>
+    <color name="color_default_background">#FAFAFA</color>
+    <color name="snackbar_red">#aa0000</color>
+    <color name="snackbar_green">#00aa00</color>
+</resources>

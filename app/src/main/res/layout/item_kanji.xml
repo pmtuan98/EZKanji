@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_id"
+    android:layout_width="110dp"
+    android:layout_height="145dp"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/dp_5"
+    app:cardElevation="5dp"
+    tools:context=".ui.screen.lesson.KanjiByLessonActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvKanji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="本"
+            android:textColor="#000000"
+            android:textSize="75sp" />
+
+        <TextView
+            android:id="@+id/tvSioVietnamese"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/circularstdbook"
+            android:gravity="center"
+            android:text="Am han Viet"
+            android:textColor="#515151"
+            android:textSize="@dimen/sp_18" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

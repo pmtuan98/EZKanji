@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    tools:context=".ui.screen.kanji.KanjiDetailActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#C0392D"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_back2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Kanji Detail"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <com.github.badoualy.kanjistroke.KanjiStrokeView
+        android:id="@+id/kanjiStroke"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout1" />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="linearlayout1,kanjiStroke" />
+
+    <TextView
+        android:id="@+id/titleChineseMean"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:fontFamily="@font/circularstdbook"
+        android:text="Chinese mean"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+    <TextView
+        android:id="@+id/titleVietMean"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:fontFamily="@font/circularstdbook"
+        android:text="Meaning"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/barrier1" />
+
+    <TextView
+        android:id="@+id/tvChineseMean"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:background="@drawable/bg_detail_kanji"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_4"
+        android:text="BỔN, BẢN"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleChineseMean" />
+
+    <TextView
+        android:id="@+id/tvVietnameseMean"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:background="@drawable/bg_detail_kanji"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_4"
+        android:text="GỐC"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/titleChineseMean" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvChineseMean,tvVietnameseMean" />
+
+    <TextView
+        android:id="@+id/titleOnyomi"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:fontFamily="@font/circularstdbook"
+        android:text="Onyomi"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier2" />
+
+    <TextView
+        android:id="@+id/titleKunyomi"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:fontFamily="@font/circularstdbook"
+        android:text="Kunyomi"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+
+    <TextView
+        android:id="@+id/tvKanjiOnyomi"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@drawable/bg_detail_kanji"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_4"
+        android:text="ホン"
+        android:textColor="@color/color_kanji_onjomi"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleOnyomi" />
+
+    <TextView
+        android:id="@+id/tvKanjiKunyomi"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:background="@drawable/bg_detail_kanji"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_4"
+        android:text="もと"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/titleKunyomi" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvKanjiOnyomi,tvKanjiKunyomi" />
+
+    <TextView
+        android:id="@+id/tvOnFurigana"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:background="@drawable/bg_detail_kanji"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_4"
+        android:text="hon"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+    <TextView
+        android:id="@+id/tvKunFurigana"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:background="@drawable/bg_detail_kanji"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_4"
+        android:text="moto"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+    <!--    <androidx.constraintlayout.widget.Barrier-->
+    <!--        android:id="@+id/barrier4"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:barrierDirection="bottom"-->
+    <!--        app:constraint_referenced_ids="tvOnFurigana, @+id/tvKunFurigana" />-->
+
+    <TextView
+        android:id="@+id/titleExample"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:fontFamily="@font/circularstdbook"
+        android:text="Vocabulary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvKunFurigana" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewVocab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_detail_kanji"
+        android:padding="@dimen/dp_12"
+        app:layout_constraintBottom_toTopOf="@+id/btnFlashcard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleExample"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnFlashcard"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/bg_button_writing2"
+        android:fontFamily="@font/circularstdbook"
+        android:text="Flashcard"
+        android:textColor="#c0392d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

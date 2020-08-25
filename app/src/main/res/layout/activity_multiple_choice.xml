@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4">
+
+    <ImageButton
+        android:id="@+id/btnExit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_baseline_clear_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvQuestionNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="/"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvTotalQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/btnFinish"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/ic_finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarMultiple"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout" />
+
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:textColor="@color/color_text_primary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarMultiple"
+        app:layout_goneMarginEnd="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tvAnswerA"
+        android:layout_width="164dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_multiple_answer"
+        android:gravity="center"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion" />
+
+    <TextView
+        android:id="@+id/tvAnswerB"
+        android:layout_width="164dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_multiple_answer"
+        android:gravity="center"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion" />
+
+    <TextView
+        android:id="@+id/tvAnswerC"
+        android:layout_width="164dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_multiple_answer"
+        android:gravity="center"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAnswerA" />
+
+    <TextView
+        android:id="@+id/tvAnswerD"
+        android:layout_width="164dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_multiple_answer"
+        android:gravity="center"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tvAnswerB" />
+
+
+    <ImageButton
+        android:id="@+id/btnNextQuestion"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_ripple"
+        android:src="@drawable/ic_next_multiple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAnswerD" />
+
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/btnBackQuestion"-->
+    <!--        android:layout_width="64dp"-->
+    <!--        android:layout_height="64dp"-->
+    <!--        android:layout_marginTop="44dp"-->
+    <!--        android:background="@drawable/bg_ripple"-->
+    <!--        android:src="@drawable/ic_back_multiple"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.201"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvAnswerC" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
